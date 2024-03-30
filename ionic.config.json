@@ -1,0 +1,7 @@
+{
+  "name": "appCasa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
