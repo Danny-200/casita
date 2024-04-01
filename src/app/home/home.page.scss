@@ -1,27 +1,54 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+// home.page.scss
+.house-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 80px solid #681416;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.house-body {
+  border: 1px solid #2f5c9f;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  color: #8c8c8c;
 
+.encendida {
   margin: 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border: 1px solid #00ff15;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(14, 222, 145, 0.458);
+  color: rgb(0, 255, 72); /* Color para cuando la luminaria está encendida */
 }
 
-#container a {
-  text-decoration: none;
+.apagada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border: 1px solid #560505;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.458);
+  color: rgb(180, 4, 4); /* Color para cuando la luminaria está apagada */
 }

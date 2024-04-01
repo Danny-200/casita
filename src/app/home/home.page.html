@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Mi Casa</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="house-container">
+    <div class="roof"></div>
+    <div class="house-body">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div (click)="Estado('cocina')">
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzComedor.encendida, 'apagada': !luzComedor.encendida}" [style.color]="colorCocina"></ion-icon>
+              <p>Cocina</p>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="Estado('comedor')">
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzComedor.encendida, 'apagada': !luzComedor.encendida}" [style.color]="colorComedor"></ion-icon>
+              <p>Comedor</p>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="Estado('sala')">
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzSala.encendida, 'apagada': !luzSala.encendida}" [style.color]="colorSala"></ion-icon>
+              <p>Sala</p>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="Estado('sotano')"> 
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzSotano.encendida, 'apagada': !luzSotano.encendida}" [style.color]="colorSotano"></ion-icon>
+              <p>Sotano</p>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="Estado('dormitorio')">
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzDormitorio.encendida, 'apagada': !luzDormitorio.encendida}" [style.color]="colorDormitorio"></ion-icon>
+              <p>Dormitorio</p>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="Estado('oficina')">
+              <ion-icon name="bulb-outline" [ngClass]="{'encendida': luzOficina.encendida, 'apagada': !luzOficina.encendida}" [style.color]="colorOficina"></ion-icon>
+              <p>Oficina</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>

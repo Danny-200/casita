@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lecturad-3d871": {
+      "hosting": {
+        "app": [
+          "lecturad-3d871"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lecturad-3d871"
+  }
+}
